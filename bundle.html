@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전체 시스템 번들 | Hanajeon</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            500: '#14b8a6',
+                            600: '#0d9488',
+                            900: '#0f766e',
+                        },
+                        dark: {
+                            bg: '#0a0a0a',
+                            surface: '#121212',
+                            border: '#2a2a2a'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-feature-settings: "cv11", "ss01";
+            background-color: #F9F8F6;
+            color: #1a1a1a;
+        }
+        
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #1a1a1a 0%, #525252 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .text-gradient-brand {
+            background: linear-gradient(135deg, #0f766e 0%, #14b8a6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .logo {
+            font-family: 'Inter', 'Pretendard', sans-serif;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+        }
+        .logo-frame {
+            width: 18px;
+            height: 18px;
+            border: 1.5px solid #1C1C1C;
+            display: inline-block;
+            margin-right: 8px;
+        }
+        .subtitle {
+            font-size: 14px;
+            color: #555;
+            margin-top: 4px;
+        }
+    </style>
+</head>
+<body class="selection:bg-teal-500 selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 glass-panel border-b-0 border-b-gray-200">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center">
+            <span class="logo-frame"></span>
+            <div class="flex flex-col">
+                <span class="logo"><span style="color:#14b8a6">ONE</span><span style="color:#0e1a2b">FRAME</span></span>
+                <span class="subtitle">한나전 전자책 완주 시스템</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="pt-32 pb-20 px-6 text-center">
+        <div class="max-w-4xl mx-auto">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-yellow-100 border border-yellow-200 text-yellow-700 text-xs font-medium tracking-wide uppercase mb-8">
+                Limited Offer
+            </div>
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 tracking-tight">
+                <span class="text-gradient">전자책 완주 시스템</span><br>
+                <span class="text-gradient-brand">All-in-One Package</span>
+            </h1>
+            <p class="text-xl text-gray-600 font-light max-w-2xl mx-auto">
+                0번부터 2번까지, 한나전의 전체 시스템을 한 번에 소유하세요.
+            </p>
+        </div>
+    </section>
+
+    <!-- Bundle Contents (Bento) -->
+    <section class="py-12 px-6">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            <!-- Step 0 -->
+            <div class="glass-panel p-8 rounded-2xl relative overflow-hidden group hover:bg-white/80 transition-colors">
+                <div class="absolute top-4 right-4 text-gray-200 text-6xl font-bold select-none group-hover:text-gray-300 transition-colors">0</div>
+                <div class="relative z-10">
+                    <div class="w-12 h-12 rounded-lg bg-teal-50 flex items-center justify-center mb-6">
+                        <i data-lucide="compass" class="w-6 h-6 text-teal-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-gray-900">방향 (Direction)</h3>
+                    <ul class="space-y-2 text-gray-600 text-sm">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-3 h-3 text-teal-600"></i> 기획안 템플릿</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-3 h-3 text-teal-600"></i> AI 사고 검증 질문</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Step 1 -->
+            <div class="glass-panel p-8 rounded-2xl relative overflow-hidden group hover:bg-white/80 transition-colors">
+                <div class="absolute top-4 right-4 text-gray-200 text-6xl font-bold select-none group-hover:text-gray-300 transition-colors">1</div>
+                <div class="relative z-10">
+                    <div class="w-12 h-12 rounded-lg bg-teal-50 flex items-center justify-center mb-6">
+                        <i data-lucide="type" class="w-6 h-6 text-teal-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-gray-900">판단 (Decision)</h3>
+                    <ul class="space-y-2 text-gray-600 text-sm">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-3 h-3 text-teal-600"></i> 제목·목차 사고 정리</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-3 h-3 text-teal-600"></i> 독자 선택 기준표</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="glass-panel p-8 rounded-2xl relative overflow-hidden group hover:bg-white/80 transition-colors">
+                <div class="absolute top-4 right-4 text-gray-200 text-6xl font-bold select-none group-hover:text-gray-300 transition-colors">2</div>
+                <div class="relative z-10">
+                    <div class="w-12 h-12 rounded-lg bg-teal-50 flex items-center justify-center mb-6">
+                        <i data-lucide="fast-forward" class="w-6 h-6 text-teal-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-gray-900">완주 (Completion)</h3>
+                    <ul class="space-y-2 text-gray-600 text-sm">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-3 h-3 text-teal-600"></i> 원고 완주 시스템</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-3 h-3 text-teal-600"></i> 구조와 속도 가이드</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Pricing & CTA -->
+    <section class="py-20 px-6">
+        <div class="max-w-3xl mx-auto glass-panel p-10 md:p-16 rounded-3xl text-center relative overflow-hidden border-teal-500/20">
+            <div class="absolute inset-0 bg-gradient-to-b from-teal-50/50 to-transparent"></div>
+            
+            <div class="relative z-10">
+                <h2 class="text-2xl font-bold mb-8 text-gray-600">Total Value</h2>
+                
+                <div class="flex items-center justify-center gap-4 mb-2">
+                    <span class="text-2xl text-gray-400 line-through decoration-gray-400">₩107,000</span>
+                    <i data-lucide="arrow-right" class="w-6 h-6 text-gray-400"></i>
+                    <span class="text-5xl md:text-6xl font-bold text-gray-900 tracking-tight">₩89,000</span>
+                </div>
+                <p class="text-teal-700 font-medium mb-10">17% 할인된 가격으로 시작하세요</p>
+
+                <div class="flex flex-col gap-4 max-w-sm mx-auto">
+                    <a href="checkout.html" class="w-full py-4 bg-gray-900 text-white rounded-full font-bold text-lg hover:scale-105 transition-transform shadow-xl hover:shadow-2xl">
+                        전체 시스템 구매하기
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-20 px-6 max-w-3xl mx-auto">
+        <h2 class="text-2xl font-bold mb-10 text-center text-gray-900">자주 묻는 질문</h2>
+        <div class="space-y-4">
+            <div class="glass-panel p-6 rounded-xl">
+                <h3 class="font-bold mb-2 text-gray-900">Q. 번들에 포함된 파일 형식은 무엇인가요?</h3>
+                <p class="text-gray-600 text-sm">A. PDF 및 Notion 템플릿 링크, 수정 가능한 텍스트 파일로 제공됩니다. PC와 모바일 어디서든 열람 가능합니다.</p>
+            </div>
+            <div class="glass-panel p-6 rounded-xl">
+                <h3 class="font-bold mb-2 text-gray-900">Q. 구매 후 언제까지 볼 수 있나요?</h3>
+                <p class="text-gray-600 text-sm">A. 평생 소장 가능한 파일입니다. 기간 제한 없이 언제든 다시 꺼내보실 수 있습니다.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 border-t border-gray-200 text-center text-gray-500 text-sm">
+        <p>&copy; 2024 Hanajeon. All rights reserved.</p>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
