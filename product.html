@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ONEFRAME — 결제 상품/서비스 확인용 상세페이지</title>
+  <meta name="description" content="전자책 기획·구조 설계·실행 프레임을 제공하는 디지털 콘텐츠. 결제 완료 즉시 제공.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    body { font-family: Inter, sans-serif; background:#F9F8F6; color:#1a1a1a }
+    .page { max-width: 880px; margin: 0 auto; padding: 24px }
+    .card { background:#fff; border:1px solid #e5e7eb; border-radius: 12px; padding: 20px }
+    .sec-title { font-weight:700; font-size: 1rem; color:#0f172a }
+    .line { height:1px; background:#e5e7eb; margin: 12px 0 }
+    .label { color:#334155; font-weight:600 }
+    .footer-grid { display:grid; grid-template-columns: 1fr; gap:16px }
+    @media (min-width: 768px) { .footer-grid { grid-template-columns: repeat(3,1fr) } }
+  </style>
+</head>
+<body>
+
+  <header class="page">
+    <div class="card flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <span style="width:18px;height:18px;border:1.5px solid #1C1C1C;display:inline-block"></span>
+        <span class="font-semibold tracking-wide">ONEFRAME 0번 전자책 기획안 만들기</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs text-green-600">
+        <i data-lucide="lock" class="w-3 h-3"></i>
+        Secure Connection
+      </div>
+    </div>
+  </header>
+
+  <main class="page">
+
+    <!-- HERO: 손실 회피 관점의 상단 설명 영역 -->
+    <section class="card" aria-labelledby="hero">
+      <div class="sec-title" id="hero">상단 안내</div>
+      <div class="line"></div>
+      <h1 class="text-xl md:text-2xl font-bold text-gray-900 mb-2">전자책을 못 끝내는 이유는 실력이 아니라, 기획 부재입니다.</h1>
+      <p class="text-gray-700">ONEFRAME은 글을 쓰기 전에, 끝까지 가는 기준부터 세우는 시스템입니다.</p>
+    </section>
+
+    <section class="card" aria-labelledby="p-name">
+      <div class="sec-title" id="p-name">1. 상품명</div>
+      <div class="line"></div>
+      <p class="label">ONEFRAME 0번 전자책 기획안 만들기</p>
+    </section>
+
+    <section class="card mt-4" aria-labelledby="p-type">
+      <div class="sec-title" id="p-type">2. 상품 유형</div>
+      <div class="line"></div>
+      <p>디지털 콘텐츠 (전자책 / 온라인 콘텐츠)</p>
+    </section>
+
+    <section class="card mt-4" aria-labelledby="p-desc">
+      <div class="sec-title" id="p-desc">3. 상품 상세 설명</div>
+      <div class="line"></div>
+      <ul class="list-disc pl-5 space-y-1">
+        <li>자기계발 및 실행 설계를 돕는 디지털 가이드 콘텐츠</li>
+        <li>구매 후 즉시 제공되는 전자 콘텐츠</li>
+        <li>오프라인 제공, 실물 배송 없음</li>
+      </ul>
+    </section>
+
+    <!-- 공감 문제 제기 섹션 -->
+    <section class="card mt-4" aria-labelledby="pain">
+      <div class="sec-title" id="pain">이런분을 위해 만들었어요.</div>
+      <div class="line"></div>
+      <ul class="list-disc pl-5 space-y-1">
+        <li>주제는 있는데 어디서부터 써야 할지 모르겠다</li>
+        <li>목차를 짜다 말고 다시 처음으로 돌아간다</li>
+        <li>쓰다 보면 방향이 바뀌고 다시 갈아엎는다</li>
+        <li>‘조금 더 정리되면’ 하다 몇 달이 지나간다</li>
+      </ul>
+      <p class="mt-2 text-gray-700">이건 의지가 약해서가 아니라, 처음부터 완주 기준이 없었기 때문입니다.</p>
+    </section>
+
+    <section class="card mt-4" aria-labelledby="p-provide">
+      <div class="sec-title" id="p-provide">4. 제공 방식 및 제공 시점 (중요)</div>
+      <div class="line"></div>
+      <ul class="list-disc pl-5 space-y-1">
+        <li>결제 완료 즉시 제공</li>
+        <li>이메일 발송 또는 온라인 열람 방식</li>
+        <li>최대 제공 지연 없음</li>
+      </ul>
+    </section>
+
+    <!-- 손실 회피 프레임 섹션 -->
+    <section class="card mt-4" aria-labelledby="loss">
+      <div class="sec-title" id="loss">안 쓰면 발생하는 비용</div>
+      <div class="line"></div>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div>
+          <ul class="list-disc pl-5 space-y-1">
+            <li>시간 손실: 기획 없이 쓰다 멈추는 반복</li>
+            <li>에너지 소모: 수정 → 삭제 → 재작성의 루프</li>
+            <li>기회 비용: 완성만 했어도 얻을 수 있었던 결과</li>
+          </ul>
+        </div>
+        <div>
+          <div class="label mb-1">ONEFRAME 사용 시 효과</div>
+          <ul class="list-disc pl-5 space-y-1">
+            <li>쓸 범위가 명확해진다</li>
+            <li>중간에 흔들리지 않는다</li>
+            <li>“지금 쓰면 된다”는 확신을 갖게 된다</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="card mt-4" aria-labelledby="p-price">
+      <div class="sec-title" id="p-price">5. 가격</div>
+      <div class="line"></div>
+      <p>39,000원 (부가세 포함)</p>
+      <p>단일 상품, 추가 결제 없음</p>
+    </section>
+
+    <section class="card mt-4" aria-labelledby="p-refund">
+      <div class="sec-title" id="p-refund">6. 환불 정책 (토스 심사 기준 맞춤)</div>
+      <div class="line"></div>
+      <ul class="list-disc pl-5 space-y-1">
+        <li>결제일로부터 3일 이내</li>
+        <li>콘텐츠 미열람 또는 이용 곤란 시 환불 가능</li>
+        <li>디지털 콘텐츠 특성상 열람 후 단순 변심 환불 불가</li>
+      </ul>
+      <p class="text-xs text-gray-500 mt-2">디지털 콘텐츠 특성상 결제 후 즉시 제공됩니다.</p>
+    </section>
+
+    <section class="card mt-4" aria-labelledby="p-cta">
+      <div class="sec-title" id="p-cta">7. 결제</div>
+      <div class="line"></div>
+      <!-- 구매 정당화 메시지 (버튼 위) -->
+      <ul class="list-disc pl-5 space-y-1 mb-3 text-gray-700">
+        <li>기준이 없으면 완성도 없습니다</li>
+        <li>지금 쓰지 않으면 또 미뤄집니다</li>
+        <li>ONEFRAME은 시작을 쉽게 만드는 게 아니라, 끝을 가능하게 만듭니다</li>
+      </ul>
+      <a href="/checkout.html" class="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 text-white rounded-lg font-semibold">
+        결제하기 (39,000원) <i data-lucide="arrow-right" class="w-4 h-4"></i>
+      </a>
+      <!-- 핵심 가치 한 문장 (버튼 아래 강조) -->
+      <p class="mt-3 text-gray-800 font-semibold">이 결제는 전자책을 사는 것이 아니라, 헤매는 시간을 끊고 완주를 결정하는 선택입니다.</p>
+    </section>
+
+    <!-- 강의 아님 명시 -->
+    <section class="card mt-4" aria-labelledby="not-course">
+      <div class="sec-title" id="not-course">안내</div>
+      <div class="line"></div>
+      <ul class="list-disc pl-5 space-y-1">
+        <li>글 잘 쓰는 법을 가르치는 강의가 아님</li>
+        <li>동기부여 콘텐츠 아님</li>
+        <li>대신 “이 전자책은 여기까지만 쓰면 완성이다”라는 기준을 제공합니다</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="page">
+    <div class="card footer-grid text-sm text-gray-700">
+      <div>
+        <div class="font-semibold mb-2">사업자 정보</div>
+        <p>상호명: 덕앤클레오</p>
+        <p>대표자명: 안지희</p>
+        <p>사업자등록번호: 645-01-01925</p>
+        <p>통신판매업 신고번호: 제 2021-인천미추홀-0432 호</p>
+        <p>사업장 주소: 대한민국</p>
+      </div>
+      <div>
+        <div class="font-semibold mb-2">고객문의</div>
+        <p>이메일: <a href="mailto:cleoahn33@gmail.com" class="underline">cleoahn33@gmail.com</a></p>
+        <p>응답시간: 평일 10:00~18:00</p>
+      </div>
+      <div>
+        <div class="font-semibold mb-2">유의사항</div>
+        <p>디지털 콘텐츠 특성상 결제 후 즉시 제공됩니다.</p>
+        <p>환불은 결제일로부터 3일 이내, 콘텐츠 미열람 또는 미사용에 한해 가능합니다.</p>
+      </div>
+    </div>
+    <div class="text-xs text-gray-400 mt-3">&copy; 2025 ONEFRAME</div>
+  </footer>
+
+  <script>lucide.createIcons();</script>
+</body>
+</html>

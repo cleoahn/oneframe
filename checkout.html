@@ -117,7 +117,7 @@
                     <div class="space-y-1">
                         <p class="font-semibold text-gray-900">환불 정책 요약</p>
                         <p>- 디지털 콘텐츠 특성상 결제 후 즉시 제공</p>
-                        <p>- 결제일 기준 7일 이내, 콘텐츠 미열람 시에만 환불 가능</p>
+                        <p>- 결제일 기준 3일 이내, 콘텐츠 미열람 시에만 환불 가능</p>
                         <p>- 상세 환불 정책은 하단에 명시</p>
                     </div>
                 </div>
@@ -245,20 +245,20 @@
                 <h4 class="font-semibold text-gray-900 mb-2">사업자 정보</h4>
                 <p>상호명: 덕앤클레오</p>
                 <p>대표자명: 안지희</p>
-                <p>사업자등록번호: 000-00-00000</p>
-                <p>통신판매업 신고번호: 신고 준비중</p>
+                <p>사업자등록번호: 645-01-01925</p>
+                <p>통신판매업 신고번호: 제 2021-인천미추홀-0432 호</p>
                 <p>사업장 소재지: 대한민국</p>
             </div>
             <div>
                 <h4 class="font-semibold text-gray-900 mb-2">고객지원</h4>
-                <p>이메일: <a href="mailto:cleohann@gmail.com" class="underline">cleohann@gmail.com</a></p>
+                <p>이메일: <a href="mailto:cleoahn33@gmail.com" class="underline">cleoahn33@gmail.com</a></p>
                 <p>응답시간: 평일 10:00~18:00</p>
             </div>
             <div>
                 <h4 class="font-semibold text-gray-900 mb-2">상품 및 환불</h4>
                 <p>상품 유형: 디지털 콘텐츠 (전자책 / 온라인 콘텐츠)</p>
                 <p class="mt-2">디지털 콘텐츠 특성상 결제 후 즉시 제공됩니다.</p>
-                <p>결제일로부터 7일 이내이며, 콘텐츠 미열람 또는 미사용에 한해 환불이 가능합니다.</p>
+                <p>결제일로부터 3일 이내이며, 콘텐츠 미열람 또는 미사용에 한해 환불이 가능합니다.</p>
                 <p class="mt-2"><a href="/refund.html" class="underline">환불 정책 전문 보기</a></p>
             </div>
         </div>
@@ -309,8 +309,10 @@
                     });
                 } else {
                     kakaoBtn.disabled = true;
+                    kakaoBtn.setAttribute('aria-disabled', 'true');
                     kakaoBtn.classList.add('opacity-60', 'cursor-not-allowed');
-                    kakaoBtn.title = '카카오페이 링크 미설정';
+                    kakaoBtn.title = '카카오페이 결제 준비중';
+                    kakaoBtn.textContent = '카카오페이 (준비중)';
                 }
             }
 
@@ -321,8 +323,10 @@
                     });
                 } else {
                     naverBtn.disabled = true;
+                    naverBtn.setAttribute('aria-disabled', 'true');
                     naverBtn.classList.add('opacity-60', 'cursor-not-allowed');
-                    naverBtn.title = '네이버페이 링크 미설정';
+                    naverBtn.title = '네이버페이 결제 준비중';
+                    naverBtn.textContent = '네이버페이 (준비중)';
                 }
             }
         });
