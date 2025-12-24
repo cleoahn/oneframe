@@ -2,13 +2,20 @@
 <html lang="ko" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" 
+    content="width=device-width, 
+    initial-scale=1.0">
     <title>Secure Checkout | Hanajeon</title>
-    <script src="https://js.tosspayments.com/v1/payment-widget"></script>
+    
+    <script 
+    src="https://js.tosspayments.com/v1
+    /payment-widget"></script>
 
     <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
+    <script 
+    src="https://cdn.tailwindcss.com"><
+    /script>
+    <head>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -83,9 +90,7 @@
             color: #555;
             margin-top: 4px;
         }
-    </style> <script 
-    src="https://js.tosspayments.com/v2
-    /standard"></script>
+    </style> 
 </head>
 <body class="selection:bg-teal-500 selection:text-white flex flex-col min-h-screen">
 
@@ -120,6 +125,38 @@
     >
       결제하기
     </button>
+      </button>
+
+<script>
+  const clientKey = "test_ck_KNbdOvk5rkWko9Ymxg7Ern07xlzm";
+
+  const tossPayments = TossPayments(clientKey);
+
+  const widgets = tossPayments.widgets({
+    customerKey: "customer_001",
+  });
+
+  widgets.setAmount({
+    currency: "KRW",
+    value: 39000,
+  });
+
+  widgets.renderPaymentMethods({
+    selector: "#payment-method",
+    variantKey: "DEFAULT",
+  });
+
+  document
+    .getElementById("payment-button")
+    .addEventListener("click", async () => {
+      await widgets.requestPayment({
+        orderId: "order_" + new Date().getTime(),
+        orderName: "ONEFRAME 전자책",
+        successUrl: window.location.origin + "/success.html",
+        failUrl: window.location.origin + "/fail.html",
+      });
+    });
+</script>
       <script>
   const clientKey = "test_ck_KNbdOvk5rkWko9Ymxg7Ern07xlzm"; // 네 Client Key
   const tossPayments = TossPayments(clientKey);
